@@ -1,0 +1,35 @@
+version: '3.4'
+services:
+  web:
+    labels:
+      shipyard.route: '/'
+    build:
+      context: .
+    ports:
+      - '8090:8090'
+
+  web:
+    labels:
+      shipyard.route: '/'
+    build:
+      context: .
+    ports:
+      - '8090:8090'
+
+  web-1:
+    container_name: 'frontend'
+    labels:
+      shipyard.route: '/'
+    build:
+      context: .
+    ports:
+      - '8090:8090'
+
+  web-2:
+    container_name: 'frontend'
+    labels:
+      shipyard.route: '/'
+    build:
+      context: .
+    ports:
+      - '8090:8090'
