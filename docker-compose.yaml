@@ -8,18 +8,10 @@ services:
     ports:
       - '8090:8090'
 
-  web:
-    labels:
-      shipyard.route: '/'
-    build:
-      context: .
-    ports:
-      - '8090:8090'
-
   web-1:
     container_name: 'frontend'
     labels:
-      shipyard.route: '/'
+      shipyard.route: '/s'
     build:
       context: .
     ports:
@@ -28,7 +20,7 @@ services:
   web-2:
     container_name: 'frontend'
     labels:
-      shipyard.route: '/'
+      shipyard.route: '/d'
     build:
       context: .
     ports:
